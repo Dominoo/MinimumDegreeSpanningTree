@@ -37,7 +37,7 @@ bool stackEmpty(){
     }
     return false;
 }
-/* ??? Co když bude prázdný???
+/* 
  * Return element on top of stack without removal.
  * @return element on top.
  */
@@ -78,6 +78,10 @@ void stackPush(StackElem elem){
     }
     stack.elements[++(stack.top)] = elem;
 }
+/*
+ * Pop top/first element from the stack.
+ * @return top element.
+ */
 StackElem stackPop(){
     if(!stackEmpty()){
         return stack.elements[(stack.top)--];
