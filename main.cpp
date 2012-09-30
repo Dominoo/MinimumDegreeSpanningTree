@@ -90,6 +90,12 @@ StackElem stackPop(){
     }
 }
 /*
+ * Free stack memory.
+ */
+void stackDestroy(){
+    free(stack.elements);
+}
+/*
  * 
  */
 int main(int argc, char** argv) {
@@ -145,6 +151,8 @@ int main(int argc, char** argv) {
        if(stackEmpty())
         printf("prazdny\n");
     else printf("neni prazdny \n");
+    
+    stackDestroy();
     
     return 0;
 }
