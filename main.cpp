@@ -108,6 +108,7 @@ void stackDestroy(){
 }
 //================================LOAD GRAPH=============================
 //size of matrix
+
 int size;
 
 /**
