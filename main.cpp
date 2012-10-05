@@ -9,107 +9,50 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stack>
+#include "SpanningTree.h"
+#include "Edge.h"
 
 
-#define DEFSIZE 2
 #define MatrixType char
+
+
 
 #define _DEBUG
 
 using namespace std;
 
-//=================================STACK=================================
-typedef int StackElem;
+#pragma mark 
+#pragma mark Graphs
 
-struct Stack{
-    //Array of elements
-    StackElem *elements;
-    //Size of array
-    int size;
-    //Index of top element in stack
-    int top;
-};
+int size = 0,currentDegree = 0,maxNodes = 0;
 
-Stack stack;
 
-/**
- * Check if stack is empty.
- * @return true if empty
- */
-bool stackEmpty(){
-    if(stack.top == -1){
-        return true;
-    }
-    return false;
-}
-/** 
- * Return element on top of stack without removal.
- * @return element on top.
- */
-StackElem stackTop(){
-    if(!stackEmpty()){
-        return stack.elements[stack.top];
-    }else{
-#ifdef _DEBUG
-        perror("Stack is empty.\n");
-#endif
-    }
-}
-/**
- * Init stack memory.
- * @param size num of elements in stack.
- */
-void stackInit(int size = DEFSIZE){
-    stack.elements = (StackElem*) calloc(size,sizeof(StackElem));
-    stack.size = size;
-    stack.top = -1;
-}
-/**
- * Push element to the stack.
- * Extend stack size if necessary.
- * @param elem element pushed to stack.
- */
-void stackPush(StackElem elem){
-    if(stack.top == (stack.size - 1)){
-#ifdef _DEBUG
-        printf("Zvetsuji pamet.\n");
-#endif
-        //allocate new two times bigger memory
-        StackElem *tmp = (StackElem*) calloc(stack.size*2,sizeof(StackElem));
-        //move existing BYTES of elements from stack 
-        memmove(tmp,stack.elements,sizeof(StackElem)*stack.size);
-        //free old/small memory
-        free(stack.elements);
-        //add pointer of new bigger memory to stack
-        stack.elements = tmp;
-        //change stack size
-        stack.size = stack.size*2;
-    }
-    stack.elements[++(stack.top)] = elem;
-}
-/**
- * Pop top/first element from the stack.
- * @return top element.
- */
-StackElem stackPop(){
-    if(!stackEmpty()){
-        return stack.elements[(stack.top)--];
-    }else{
-#ifdef _DEBUG      
-        perror("Stack is empty.\n");
-#endif
-    }
-}
-/**
- * Free stack memory.
- */
-void stackDestroy(){
-    free(stack.elements);
-}
 //================================LOAD GRAPH=============================
 //size of matrix
 
-int size;
+MatrixType** allocateArray(int size) {
+    MatrixType **graph = (MatrixType**) calloc(size, sizeof (MatrixType*));
+    for(int i = 0 ; i < size ; i++) {
+        graph[i] = (MatrixType*) calloc(size, sizeof (MatrixType));
+       // memset(graph[i], 0, sizeof(MatrixType) * size);
+    }
+    return graph;
+}
+
+void copyArray(MatrixType** minimal, MatrixType** newMinimal) {
+    for ( int i = 0; i < size; ++i ){        
+      memcpy(minimal[i], newMinimal[i], sizeof (MatrixType) * size * size);
+    }
+}
+
+bool isSpanningTree(MatrixType** tree) {
+  //  if(maxNodes == 0 && )
+}
+
+//int getDegree(Matrix)
+
+
 
 /**
  * Load graph from file to memory.
@@ -130,18 +73,17 @@ MatrixType** loadGraph(FILE* file, char *path) {
         exit(1);
     }
     if (fscanf(file, "%d", &size) == 1) {
-        graph = (MatrixType**) calloc(size, sizeof (MatrixType*));
+        graph = allocateArray(size);
+        
         while ((c = fgetc(file)) != EOF) {
             if (c == '\n' && row < size) {
-                graph[row++] = (MatrixType*) calloc(size, sizeof (MatrixType));
                 col = 0;
-                //don't save \n char
+                row++;
                 continue;
-                //read only 50 lines
             } else if (c == '\n' && row == size) {
                 break;
             } else {
-                graph[row - 1][col] = c;
+                graph[row - 1][col] = atoi(&c);
                 col++;
             }
         }
@@ -150,7 +92,8 @@ MatrixType** loadGraph(FILE* file, char *path) {
         fclose(file);
         return NULL;
 
-    }
+}
+   
 #ifdef _DEBUG
     printf("File readed.\n");
 #endif
@@ -158,6 +101,18 @@ MatrixType** loadGraph(FILE* file, char *path) {
     fclose(file);
     return graph;
 }
+
+void printGraph(MatrixType **graph) {
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            printf("%d",graph[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+}
+
 /**
  * Free graph memory.
  * @param graph to destroy
@@ -177,74 +132,89 @@ void destroyGraph(MatrixType **graph){
  * 
  */
 int main(int argc, char** argv) {
-    /*
-    stackInit();
-    printf("stack size %d\n", stack.size);
-    printf("stack top %d\n", stack.top);
-    //prazdny?
-    if(stackEmpty())
-        printf("prazdny\n");
-    else printf("neni prazdny \n");
+      
     
-    stackTop();
+    MatrixType **G = NULL;
+    MatrixType **minimalTree = NULL;
     
-    stackPop();
-    printf("stack top %d\n", stack.top);
     
-    //vlozit hodnoty
-    stackPush(1);
-    printf("stack top %d\n", stack.top);
+    FILE *file = NULL;
+    int minimalDegree = 0;
+    int currentDegree = 0;
+    G = loadGraph(file, argv[1]);
+    SpanningTree* st = new SpanningTree(size);
+    minimalTree = allocateArray(size);
+   
 
-    stackPush(2);
-    printf("stack top %d\n", stack.top);
+    stack<Edge*> stack;
     
-    stackPush(3);
-    printf("stack top %d\n", stack.top);
-    
-    stackPush(4);
-    printf("stack top %d\n", stack.top);
-            
-    stackPush(5);
-    printf("stack top %d\n", stack.top);
-    
-    printf("stack top %d\n",stackTop());
-    printf("stack top %d\n",stackTop());
-     
-
-    printf("hodnota %d\n",stackPop());
-    printf("stack top %d\n", stack.top);
-    
-    printf("hodnota %d\n",stackPop());
-    printf("stack top %d\n", stack.top);
-    
-    printf("hodnota %d\n",stackPop());
-    printf("stack top %d\n", stack.top);
-    
-    printf("hodnota %d\n",stackPop());
-    printf("stack top %d\n", stack.top);
-    
-    printf("hodnota %d\n",stackPop());
-    printf("stack top %d\n", stack.top);
-    
-       if(stackEmpty())
-        printf("prazdny\n");
-    else printf("neni prazdny \n");
-    
-    stackDestroy();
-    */
-    MatrixType **test;
-    FILE *file;
-    
-    test = loadGraph(file, argv[1]);
-
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            printf("%c",test[i][j]);
+    int startNode = 0;
+    st->vertices[startNode] = OPEN;
+   
+    //Push startNode Adjents to the stack !
+    for(int i = 0; i < size ; i++) {
+        //Consider only open ones!
+        if(G[startNode][i] == 1 && st->vertices[i] == FRESH) {
+            cout << "Init Push: " << startNode << " " << i << endl;
+            stack.push(new Edge(startNode,i));
         }
-        printf("\n");
     }
     
-    destroyGraph(test);
+    //BruteForce DFS!
+    while (!stack.empty()) {
+        
+        Edge* currentEdge = stack.top();
+        cout << "toped: " << currentEdge->from << " " << currentEdge->to << endl;
+
+        
+        if(st->vertices[currentEdge->to] == FRESH) {
+            
+            st->add(currentEdge);
+            cout << currentEdge->to << " Opened" << endl;
+            
+            
+            //Perform check for SpaningTree
+            if(st->isValid()) {
+                cout << "I have got tree" << endl;
+                printGraph(st->matrix);
+            } else {
+               // Add ajdents
+                for(int i = 0; i < size ; i++) {
+                    //Consider only open ones!
+                    if(st->vertices[i] == OPEN) {                        
+                        for(int j = 0; j < size; j++) {                       
+                            if(G[i][j] == 1 && st->vertices[j] == FRESH) {
+                                cout << "Push: " << i << " " << j << endl;
+                                stack.push(new Edge(i,j));
+                            }
+                        }
+                    }
+                }
+            }
+            
+        } else {
+            stack.pop();
+            st->remove(currentEdge);
+            cout << currentEdge->to << " Closed" << endl;
+
+            delete currentEdge;
+        }
+        
+        
+    }
+ 
+    
+    
+  //  printGraph(G);
+  //  printGraph(spanningTree);
+  //  copyArray(spanningTree,G);
+   // printGraph(spanningTree);
+
+    delete st;
+
+    
+    destroyGraph(G);
+   // free(vertices);
     return 0;
 }
 
