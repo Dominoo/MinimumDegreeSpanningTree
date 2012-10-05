@@ -15,7 +15,8 @@
 
 
 #define MatrixType char
-
+#define kLowerBound 2
+#define INF 1<<16
 
 
 #define _DEBUG
@@ -25,7 +26,7 @@ using namespace std;
 #pragma mark 
 #pragma mark Graphs
 
-int size = 0,currentDegree = 0,maxNodes = 0;
+int size = 0;
 
 
 //================================LOAD GRAPH=============================
@@ -35,7 +36,6 @@ MatrixType** allocateArray(int size) {
     MatrixType **graph = (MatrixType**) calloc(size, sizeof (MatrixType*));
     for(int i = 0 ; i < size ; i++) {
         graph[i] = (MatrixType*) calloc(size, sizeof (MatrixType));
-       // memset(graph[i], 0, sizeof(MatrixType) * size);
     }
     return graph;
 }
@@ -45,14 +45,6 @@ void copyArray(MatrixType** minimal, MatrixType** newMinimal) {
       memcpy(minimal[i], newMinimal[i], sizeof (MatrixType) * size * size);
     }
 }
-
-bool isSpanningTree(MatrixType** tree) {
-  //  if(maxNodes == 0 && )
-}
-
-//int getDegree(Matrix)
-
-
 
 /**
  * Load graph from file to memory.
@@ -133,21 +125,22 @@ void destroyGraph(MatrixType **graph){
  */
 int main(int argc, char** argv) {
       
-    
+    //Define structures
     MatrixType **G = NULL;
-    MatrixType **minimalTree = NULL;
-    
-    
+    MatrixType **minimalTree = NULL;   
     FILE *file = NULL;
-    int minimalDegree = 0;
-    int currentDegree = 0;
-    G = loadGraph(file, argv[1]);
+    int minimalDegree = INF;
+    
+    //Initialize them
+    G = loadGraph(file, argv[1]);    
     SpanningTree* st = new SpanningTree(size);
     minimalTree = allocateArray(size);
    
-
+    // Stack
     stack<Edge*> stack;
     
+    
+    //Start of the algorithm start with 1st vertex
     int startNode = 0;
     st->vertices[startNode] = OPEN;
    
@@ -160,23 +153,41 @@ int main(int argc, char** argv) {
         }
     }
     
+    
     //BruteForce DFS!
     while (!stack.empty()) {
         
         Edge* currentEdge = stack.top();
         cout << "toped: " << currentEdge->from << " " << currentEdge->to << endl;
-
         
-        if(st->vertices[currentEdge->to] == FRESH) {
-            
+        //If Vertex is opened -> proceed
+        if(st->vertices[currentEdge->to] == FRESH) {            
             st->add(currentEdge);
             cout << currentEdge->to << " Opened" << endl;
             
+            //if we have worse solution than current best abandon branch
+            if(minimalDegree < st->degree) {
+                cout << "Branch not perspective" << endl;
+                continue;
+            }        
             
             //Perform check for SpaningTree
             if(st->isValid()) {
-                cout << "I have got tree" << endl;
-                printGraph(st->matrix);
+                
+                //If we find new minimum we will asign it
+                if(minimalDegree > st->degree) {
+                    minimalDegree = st->degree;
+                    copyArray(minimalTree, st->matrix);
+                }
+                
+                //If we find best possible solution we dont continue
+                if(minimalDegree == kLowerBound) {
+                    cout << "Found lower boundary" << endl;
+                    break;
+                }
+                
+               cout << "I have got tree with degree: " << st->degree << endl;
+               printGraph(st->matrix);
             } else {
                // Add ajdents
                 for(int i = 0; i < size ; i++) {
@@ -193,28 +204,23 @@ int main(int argc, char** argv) {
             }
             
         } else {
+            //Remove edge, close vertex, backtrack
             stack.pop();
             st->remove(currentEdge);
-            cout << currentEdge->to << " Closed" << endl;
-
+            cout << currentEdge->to << " Closed" << endl;            
             delete currentEdge;
         }
         
-        
     }
- 
     
-    
-  //  printGraph(G);
-  //  printGraph(spanningTree);
-  //  copyArray(spanningTree,G);
-   // printGraph(spanningTree);
+    //Print result
+     cout << "Best solution has degree: " << minimalDegree << endl;
+     printGraph(minimalTree);
 
+    //clean up
     delete st;
-
-    
+    destroyGraph(minimalTree);
     destroyGraph(G);
-   // free(vertices);
     return 0;
 }
 
