@@ -42,7 +42,7 @@ MatrixType** allocateArray(int size) {
 
 void copyArray(MatrixType** minimal, MatrixType** newMinimal) {
     for ( int i = 0; i < size; ++i ){        
-      memcpy(minimal[i], newMinimal[i], sizeof (MatrixType) * size * size);
+      memcpy(minimal[i], newMinimal[i], sizeof (MatrixType) * size);
     }
 }
 
