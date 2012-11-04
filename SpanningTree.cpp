@@ -8,7 +8,6 @@
 
 #include "SpanningTree.h"
 
-#pragma once
 
 SpanningTree::SpanningTree(int size) {
     maxNodes = size;
