@@ -7,13 +7,20 @@
 //
 
 #include "Edge.h"
-
+/*
 Edge::Edge() {
     from = 0;
     to = 0;
 }
+ */
 
 Edge::Edge(int fromNode, int toNode) {
+    from = fromNode;
+    to = toNode;
+}
+
+Edge::Edge(int fromNode, int toNode, bool vis) {
+    visited = vis;
     from = fromNode;
     to = toNode;
 }

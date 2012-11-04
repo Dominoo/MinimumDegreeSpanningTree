@@ -14,10 +14,13 @@
 class Edge {
        
 public:
-    Edge();  // parameterless default constructor
+   // Edge();  // parameterless default constructor
     Edge(int fromNode, int toNode); //  constructor with parameters
+    Edge(int fromNode, int toNode, bool vis); //  constructor with parameters
+
     int from;
     int to;
+    bool visited;
 
 };
 

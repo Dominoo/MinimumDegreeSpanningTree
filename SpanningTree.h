@@ -14,7 +14,7 @@
 #define CLOSED 2
 
 #include <iostream>
-#include <map>
+#include <vector>
 #include "Edge.h"
 
 using namespace std;
@@ -24,7 +24,8 @@ public:
   //  int maxNodes;
   //  int
   //  int* degrees;
-    char **matrix = NULL;
+    vector<Edge*> vector;
+    char **matrix ;
     int * vertices;
     int * degrees;
     int maxNodes ;

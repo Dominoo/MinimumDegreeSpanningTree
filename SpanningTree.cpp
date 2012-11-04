@@ -8,6 +8,7 @@
 
 #include "SpanningTree.h"
 
+#pragma once
 
 SpanningTree::SpanningTree(int size) {
     maxNodes = size;
@@ -32,6 +33,7 @@ SpanningTree::~SpanningTree() {
 }
 
 void SpanningTree::add(Edge * edge ){
+   // if(edge->from > maxNodes) return;
     matrix[edge->from][edge->to] = 1;
     matrix[edge->to][edge->from] = 1;
     vertices[edge->to] = OPEN;
@@ -47,7 +49,8 @@ void SpanningTree::add(Edge * edge ){
     } 
     
     edges++;
-    currentNodes++;   
+    currentNodes++;
+    vector.push_back(edge);
 }
 
 void SpanningTree::remove(Edge * edge ){
@@ -67,6 +70,7 @@ void SpanningTree::remove(Edge * edge ){
     degree = max;
     edges--;
     currentNodes--;
+    vector.pop_back();
 }
 
 bool SpanningTree::isValid() {

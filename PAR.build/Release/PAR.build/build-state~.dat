@@ -1,0 +1,167 @@
+TPAR
+v5
+r1
+cCheck dependencies
+cCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cLd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR normal x86_64
+cGenerateDSYMFile /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c00000000503F1B7700000000000000AA
+t1346313079
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdio.h
+c00000000505B792C0000000000004523
+t1348172076
+s17699
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdlib.h
+c00000000505B792C0000000000003089
+t1348172076
+s12425
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+c00000000505B792C0000000000001A3A
+t1348172076
+s6714
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR
+t1349800086
+s61388
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o
+t2
+s0
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/PAR.LinkFileList
+c00000000507450E6000000000000019D
+t1349800166
+s413
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o
+t2
+s0
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM
+t2
+s0
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp
+c0000000050744AC10000000000000126
+t1349798593
+s294
+i"Edge.h"
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.h
+c0000000050744AB100000000000001AA
+t1349798577
+s426
+i<iostream>
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp
+c00000000506F0799000000000000066A
+t1349453721
+s1642
+i"SpanningTree.h"
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.h
+c0000000050742E1000000000000002B7
+t1349791248
+s695
+i<iostream>
+i<map>
+i"Edge.h"
+
+N/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp
+c00000000507450930000000000001762
+t1349800083
+s5986
+i<cstdlib>
+i<stdio.h>
+i<string.h>
+i<stdlib.h>
+i<stack>
+i"SpanningTree.h"
+i"Edge.h"
+
+CBuild AST from /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp
+r0
+
+CBuild AST from /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp
+r0
+
+CBuild AST from /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies9be291668824b641^9ecf98668824b641^---0#1#0#--18"Check dependencies36"1BACDB33-ADB2-4B26-950A-9EACE0546F26-
+
+CCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s371492966.599539
+e371492967.114550
+r1
+xCompileC
+x./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cppc58f99668824b641^75ac1e678824b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp0000000000000000^2133"CompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o Edge.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-generated-files.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-own-target-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-all-target-headers.hmap -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-project-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources/x86_64 -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources -F/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree -c /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/Edge.cpp -o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/Edge.o36"5E0979BD-83D9-433C-8201-CD9D9104070C-
+
+CCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s371492966.600019
+e371492967.142528
+r1
+xCompileC
+x./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp10b199668824b641^b77c24678824b641^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp0000000000000000^2165"CompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o SpanningTree.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-generated-files.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-own-target-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-all-target-headers.hmap -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-project-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources/x86_64 -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources -F/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree -c /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/SpanningTree.cpp -o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/SpanningTree.o36"DFF39855-39EF-4C2A-9F1A-BB7A7FC87B14-
+
+CCompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s371492966.599372
+e371492967.351076
+r1
+xCompileC
+x./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+o/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp: In function 'int main(int, char**)':
+o/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp:166: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp:166: warning: unused variable 'ss'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp2f8b99668824b641^25e659678824b641^-404"/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp: In function 'int main(int, char**)':/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp:166: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp:166: warning: unused variable 'ss'2(21%IDEActivityLogMessage2@61"Implicit conversion shortens 64-bit value into a 32-bit value-371492967#123#161#-1#-23%DVTTextDocumentLocation3@100"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp0000000000000000^165#18446744073709551615#165#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@20"Unused variable 'ss'-371492967#284#120#-1#-3@100"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp0000000000000000^165#18446744073709551615#165#18446744073709551615#18446744073709551615#0#19"Unused variable '*'--0#0#0#-19%DVTDocumentLocation4@100"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp0000000000000000^2133"CompileC ./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-generated-files.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-own-target-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-all-target-headers.hmap -iquote /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/PAR-project-headers.hmap -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources/x86_64 -I/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/DerivedSources -F/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree -c /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/main.cpp -o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/main.o36"E00EC6D3-A699-43CE-9B22-8065E184AF33-
+
+CGenerateDSYMFile /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR
+s371492967.391025
+e371492967.432548
+r1
+xGenerateDSYMFile
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Generating /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYMf24266678824b641^02bb6e678824b641^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM000000000080d041^389"GenerateDSYMFile ./PAR.dSYM ./PAR    cd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR -o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.dSYM36"C3FBF264-F752-49B8-ABFD-D1936AC8EF55-
+
+CLd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR normal x86_64
+s371492967.357919
+e371492967.384222
+r1
+xLd
+x/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Link /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PARabae5b678824b641^b35c62678824b641^---0#0#0#--774"Ld ./PAR normal x86_64    cd /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree -F/Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree -filelist /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR.build/Release/PAR.build/Objects-normal/x86_64/PAR.LinkFileList -mmacosx-version-min=10.8 -stdlib=libc++ -o /Users/dominik/Documents/skola/CVUT/7.Semestr/PAR/MinimumDegreeSpanningTree/./PAR36"66088181-E54C-47CA-93F8-4E535220F045-
+
