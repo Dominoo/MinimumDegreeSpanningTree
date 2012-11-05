@@ -63,7 +63,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-n 2"
+            argument = "-n 4"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -71,7 +71,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "10UzluSouvisl"
+            argument = "14UzluSouvisl"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

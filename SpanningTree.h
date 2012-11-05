@@ -37,8 +37,9 @@ public:
     bool isValid();
     void add(Edge*);
     void remove(Edge*);
+    void reset();
 
-    
+
     
 
 };

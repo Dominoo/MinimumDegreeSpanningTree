@@ -22,6 +22,19 @@ SpanningTree::SpanningTree(int size) {
     
 }
 
+void SpanningTree::reset() {
+    int size = maxNodes;
+    vertices = (int*) calloc(size, sizeof(int)*size);
+    degrees = (int*) calloc(size, sizeof(int)*size);
+    currentNodes = degree = edges = 0;
+    matrix = (char**) calloc(size, sizeof (char*));
+    for(int i = 0 ; i < size ; i++) {
+        matrix[i] = (char*) calloc(size, sizeof (char));
+    }
+    vector.clear();
+    currentNodes++;    
+}
+
 SpanningTree::~SpanningTree() {
     free(vertices);
     free(degrees);
