@@ -1,5 +1,5 @@
 //
-//  Edge.h
+//  SpanningTree.h
 //  PAR
 //
 //  Created by Dominik Vesely on 10/5/12.
@@ -16,6 +16,9 @@
 #include <iostream>
 #include <vector>
 #include "Edge.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 
 using namespace std;
 class SpanningTree {
@@ -24,7 +27,7 @@ public:
   //  int maxNodes;
   //  int
   //  int* degrees;
-    vector<Edge*> vector;
+    vector<Edge*> vect;
     char **matrix ;
     int * vertices;
     int * degrees;

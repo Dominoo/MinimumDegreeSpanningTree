@@ -1,4 +1,4 @@
-/* 
+﻿/* 
  * File:   main.cpp
  * Author: Dominik Veselý, Marek Přibáň
  *
@@ -525,8 +525,8 @@ bool sendWork(int target, MPI_Request* request, int* buff, int maxbuffLenght, li
     index++;
     int treeSize = tree->edges;
     for (int i = 0; i < treeSize; i++) {
-        buff[index] = tree->vector[i]->from;
-        buff[index + 1] = tree->vector[i]->to;
+        buff[index] = tree->vect[i]->from;
+        buff[index + 1] = tree->vect[i]->to;
         index += 2;
     }
     buff[index] = -1;

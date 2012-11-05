@@ -1,5 +1,5 @@
 //
-//  Edge.cpp
+//  SpanningTree.cpp
 //  PAR
 //
 //  Created by Dominik Vesely on 10/5/12.
@@ -31,7 +31,7 @@ void SpanningTree::reset() {
     for(int i = 0 ; i < size ; i++) {
         matrix[i] = (char*) calloc(size, sizeof (char));
     }
-    vector.clear();
+    vect.clear();
     currentNodes++;    
 }
 
@@ -62,7 +62,7 @@ void SpanningTree::add(Edge * edge ){
     
     edges++;
     currentNodes++;
-    vector.push_back(edge);
+    vect.push_back(edge);
 }
 
 void SpanningTree::remove(Edge * edge ){
@@ -82,7 +82,7 @@ void SpanningTree::remove(Edge * edge ){
     degree = max;
     edges--;
     currentNodes--;
-    vector.pop_back();
+    vect.pop_back();
 }
 
 bool SpanningTree::isValid() {
