@@ -15,11 +15,11 @@
 #include <stdlib.h>
 #include <list>
 #include <vector>
-
 #include "mpi.h"
+#include "stdlib.h"
+//ours
 #include "SpanningTree.h"
 #include "Edge.h"
-#include "stdlib.h"
 
 #define MatrixType char
 #define kLowerBound 2
