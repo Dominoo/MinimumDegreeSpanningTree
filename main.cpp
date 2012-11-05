@@ -5,18 +5,21 @@
  * Created on 29. září 2012, 17:00
  */
 
+#include <iostream>
+#include <fstream>
+#include <limits>
+#include <list>
 #include <cstdlib>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stack>
 #include <list>
 #include <vector>
 
-
+#include "mpi.h"
 #include "SpanningTree.h"
 #include "Edge.h"
-#include "mpi.h"
+#include "stdlib.h"
 
 #define MatrixType char
 #define kLowerBound 2
