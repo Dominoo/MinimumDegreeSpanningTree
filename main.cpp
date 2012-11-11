@@ -310,6 +310,7 @@ int main(int argc, char** argv) {
                         break;
                         //Ending Message                        
                     case MSG_FINISH:
+                        cout << "FINISHING Message! " << rank << endl;
                         MPI_Recv(0, 0, MPI_INT, MPI_ANY_SOURCE, MSG_FINISH, MPI_COMM_WORLD, &status);
                         processStatus = STATUS_FINISHED;
                         break;
@@ -351,6 +352,8 @@ int main(int argc, char** argv) {
 									if(message == kLowerBound){
 										hasResult = false;
 										processStatus = STATUS_FINISHED;
+                                        cout << "Prijat minBound procesem " << rank << "stack size: "<< stack.size() << endl;
+
 									}
 									else if (message <= minimalDegree) {
 										minimalDegree = message;
@@ -437,7 +440,8 @@ int main(int argc, char** argv) {
     
     
     //Send Finish to other
-    if (rank == 0 && minimalDegree != kLowerBound) {
+    if (rank == 0)  {
+        cout << "FINISH!" << endl;
         for (i = 1; i < processorCount; i++) {            
             MPI_Send(0, 0, MPI_INT, i, MSG_FINISH, MPI_COMM_WORLD);
         }
