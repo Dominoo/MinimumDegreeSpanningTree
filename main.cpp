@@ -325,7 +325,7 @@ int main(int argc, char** argv) {
             
             //Main while run until not ampty and not finished
             while (!stack.empty() && processStatus != STATUS_FINISHED) {
-            //    wasWorking = true;
+
 				if(processorCount > 1){
                     checkCounter++;
 					if ((checkCounter % CHECK_MSG_AMOUNT) == 0) {
@@ -360,6 +360,12 @@ int main(int argc, char** argv) {
 										hasResult = false;
 									}
 									break;
+                                    
+                                case MSG_FINISH:
+                                    cout << "FINISHING Message! " << rank << endl;
+                                    MPI_Recv(0, 0, MPI_INT, MPI_ANY_SOURCE, MSG_FINISH, MPI_COMM_WORLD, &status);
+                                    processStatus = STATUS_FINISHED;
+                                    break;
                                     
                                     //ADUV token
 								case MSG_TOKEN:
